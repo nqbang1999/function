@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function calculateSquare(inputNum) {
+        return inputNum* inputNum;
+    }
+
+    function calculateCircleSquare(radius) {
+        return Math.PI* radius* radius;
+    }
+
+    function calculateCircleDiameter(radius) {
+        return Math.PI* 2* radius;
+    }
+
+    function tinhGiaiThua(inputNum) {
+        let result= 1;
+        for( let i= 1; i<= inputNum; i++ ){
+            result= result* i;
+        }
+        return result;
+    }
+
+    function checkNum(){
+        let inputUser= prompt('enter smth');
+        let isNum= isNaN(inputUser);
+        if( isNum ){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    
+    function biggestNum(num1, num2, num3) {
+        let min= Math.min(num1, num2, num3);
+        return min;
+    }
+
+    function isInteger(inputNum) {
+        let result= Number.isInteger(inputNum);
+        if( result && inputNum> 0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    let arr= [1, 2, 3, 4];
+    function switchPosition(num1, num2) {
+        arr.push(num1, num2);
+        let reservedArr= arr.reverse();
+        return reservedArr;
+    }
+    
+    function reversedArr(arr) {
+        let reversedArr= arr.reverse();
+        return reversedArr;
+    }
+
+    let characterArr= [ 'q', 'u', 'a', 'n', 'g', 'b', 'a', 'n', 'g' ];
+    let character= 'h';
+    let frequencyOfCha= 0;
+    function checkIn(characterArr, character) {
+        for( let i= 0; i< characterArr.length; i++ ){
+            let isIn= false;
+            if( characterArr[i]=== character ){
+                    frequencyOfCha= frequencyOfCha+ 1;
+                    isIn= true;
+                    return isIn;
+            }
+        }
+        if(checkIn(characterArr, character)){
+            return frequencyOfCha;
+        }
+        else {
+            return -1;
+            console.log(checkIn(characterArr, character));
+        }
+    }
+
+</script>
+
+</body>
+</html>

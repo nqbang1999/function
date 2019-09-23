@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkPrime(num) {
+        let isPrime= true;
+        if( num< 2 ){
+            isPrime= false;
+            return isPrime;
+        }
+        else if (num> 2){
+        for( let i= 2; i< num; i++ ){
+            if (num% i=== 0){
+                isPrime= false;
+                return isPrime;
+                break;
+            }
+        }
+        return isPrime;
+    }
+        else {
+            isPrime= true;
+            return isPrime;
+        }
+    }
+
+    function displayPrime() {
+        let primeNum= 2;
+        while (primeNum< 10000){
+            if( checkPrime(primeNum) ){
+                document.write(primeNum+ '<br/>');
+            }
+            primeNum++;
+        }
+    }
+    displayPrime();
+</script>
+
+</body>
+</html>
